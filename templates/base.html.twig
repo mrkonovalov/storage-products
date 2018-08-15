@@ -10,11 +10,25 @@
         <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
     {% endblock %}
 </head>
-<body style="padding-top: 50px">
-<div class="container">
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="{{ path('home') }}">[ProductsStorage]</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('products') }}">Список файлов с товарами</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main class="container" style="padding-top: 50px">
     {% block body %}
     {% endblock %}
-</div>
+</main>
 {% block javascripts %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
