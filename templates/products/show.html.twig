@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ file_name }}</h1>
+    {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+    {% endif %}
+    {% if products %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название товара</th>
+                <th scope="col">Тип</th>
+                <th scope="col">Цена</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for product in products %}
+                <tr class="{{ product.isBadData ? 'table-warning' : '' }}">
+                    <th scope="row">{{ loop.index }}</th>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.type }}</td>
+                    <td>{{ product.priceF|raw }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}
