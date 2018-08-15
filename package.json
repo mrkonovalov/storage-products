@@ -1,0 +1,17 @@
+{
+  "author": "Dmitriy Konovalov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrkonovalov/storage-products.git"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.20.1",
+    "webpack-notifier": "^1.6.0"
+  },
+  "scripts": {
+    "dev-server": "encore dev-server --hot",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production"
+  }
+}
