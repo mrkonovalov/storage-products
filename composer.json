@@ -72,6 +72,15 @@
     "extra": {
         "symfony": {
             "allow-contrib": false
+        },
+        "heroku": {
+          "framework": "symfony4",
+          "document-root": "web",
+          "php-config": [
+            "date.timezone=Europe/Moscow",
+            "display_errors=off",
+            "short_open_tag=off"
+          ]
         }
     }
 }
